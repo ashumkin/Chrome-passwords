@@ -1,0 +1,15 @@
+C:\Users\Meow\Documents\Visual Studio 2008\Projects\DPAPI\DPAPI\bin\Debug\DPAPI.exe
+C:\Users\Meow\Documents\Visual Studio 2008\Projects\DPAPI\DPAPI\bin\Debug\DPAPI.pdb
+C:\Users\Meow\Documents\Visual Studio 2008\Projects\DPAPI\DPAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Meow\Documents\Visual Studio 2008\Projects\DPAPI\DPAPI\obj\Debug\DPAPI.exe
+C:\Users\Meow\Documents\Visual Studio 2008\Projects\DPAPI\DPAPI\obj\Debug\DPAPI.pdb
+C:\Users\Meow\Dropbox\Документы\Мои проекты\DPAPI\DPAPI\obj\Debug\DPAPI.exe
+C:\Users\Meow\Dropbox\Документы\Мои проекты\DPAPI\DPAPI\obj\Debug\DPAPI.pdb
+C:\Users\Meow\Dropbox\Документы\Мои проекты\DPAPI\DPAPI\bin\Debug\DPAPI.exe
+C:\Users\Meow\Dropbox\Документы\Мои проекты\DPAPI\DPAPI\bin\Debug\DPAPI.pdb
+C:\Users\Meow\Dropbox\Документы\Мои проекты\DPAPI\DPAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Meow\Desktop\DPAPI\DPAPI\obj\Debug\DPAPI.exe
+C:\Users\Meow\Desktop\DPAPI\DPAPI\obj\Debug\DPAPI.pdb
+C:\Users\Meow\Desktop\DPAPI\DPAPI\bin\Debug\DPAPI.exe
+C:\Users\Meow\Desktop\DPAPI\DPAPI\bin\Debug\DPAPI.pdb
+C:\Users\Meow\Desktop\DPAPI\DPAPI\obj\Debug\ResolveAssemblyReference.cache
