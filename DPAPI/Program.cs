@@ -338,14 +338,13 @@ public class Chrome
             string filename = "my_chrome_passwords.html"; 
             StreamWriter Writer = new StreamWriter(filename, false, Encoding.UTF8);
             string db_way = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
-				+ "/Google/Chrome/User Data/Default/Login Data"; //путь к файлу базы данных
+				+ "/Google/Chrome/User Data/Default/Login Data"; // a path to a database file
 			Console.WriteLine("DB file = " + db_way);
-            string db_field = "logins";   //имя поля БД
-            byte[] entropy = null; //разработчики не стали использовать энтропию.
-                                   //Однако класс DPAPI требует указания энтропии в любом случае,
-                                   //независимо от того - присутствует она, или нет.
-            string description;    //я не понял смысла переменной, но она обязательная. На выходе всегда Null
-            // Подключаемся к базе данных
+            string db_field = "logins";   // DB table field name
+            byte[] entropy = null; // DPAPI class does not use entropy but requires this parameter
+            string description;    // I could not understand the purpose of a this mandatory parameter
+                                   // Output always is Null
+            // Connect to DB
             string ConnectionString = "data source=" + db_way + ";New=True;UseUTF16Encoding=True";
             DataTable DB = new DataTable();
             string sql = string.Format("SELECT * FROM {0} {1} {2}", db_field, "", "");
@@ -357,10 +356,10 @@ public class Chrome
                 int rows = DB.Rows.Count;
                 for (int i = 0; i < rows; i++)
                 {
-                    Writer.Write(i + 1 + ") "); // Здесь мы записываем порядковый номер нашей троицы "Сайт-логин-пароль".                  
-                    Writer.WriteLine(DB.Rows[i][1] + "<br>"); //Это ссылка на сайт
-                    Writer.WriteLine(DB.Rows[i][3] + "<br>"); //Это логин
-                    // Здесь начинается расшифровка пароля
+                    Writer.Write(i + 1 + ") "); // Here we print order number of our trinity "site-login-password"
+                    Writer.WriteLine(DB.Rows[i][1] + "<br>"); // site URL
+                    Writer.WriteLine(DB.Rows[i][3] + "<br>"); // login
+                    // Here the password description
                     byte[] byteArray = (byte[])DB.Rows[i][5];
                     byte[] decrypted = DPAPI.Decrypt(byteArray, entropy, out description);
                     string password = new UTF8Encoding(true).GetString(decrypted);
